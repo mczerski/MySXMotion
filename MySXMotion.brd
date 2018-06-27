@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -146,7 +146,7 @@
 <wire x1="6.096" y1="40.64" x2="6.096" y2="25.908" width="0" layer="20"/>
 <wire x1="6.096" y1="25.908" x2="-1.27" y2="25.908" width="0" layer="20"/>
 <wire x1="-1.27" y1="25.908" x2="-1.27" y2="0" width="0" layer="20"/>
-<text x="21.844" y="39.878" size="1.016" layer="25" font="vector" rot="R180">MySXMotion 1.0</text>
+<text x="21.844" y="39.878" size="1.016" layer="25" font="vector" rot="R180">MySXMotion 1.1</text>
 <hole x="17.145" y="10.34" drill="3"/>
 <hole x="17.145" y="32.84" drill="3"/>
 </plain>
@@ -1533,6 +1533,28 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </package>
 </packages>
 </library>
+<library name="zetex">
+<description>&lt;b&gt;Zetex Power MOS FETs, Bridges, Diodes&lt;/b&gt;&lt;p&gt;
+http://www.zetex.com&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SOT-23">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
+<wire x1="-1.4224" y1="0.381" x2="1.4732" y2="0.381" width="0.1524" layer="21"/>
+<wire x1="1.4732" y1="0.381" x2="1.4732" y2="-0.381" width="0.1524" layer="21"/>
+<wire x1="1.4732" y1="-0.381" x2="-1.4224" y2="-0.381" width="0.1524" layer="21"/>
+<wire x1="-1.4224" y1="-0.381" x2="-1.4224" y2="0.381" width="0.1524" layer="21"/>
+<smd name="3" x="0.9906" y="1.016" dx="0.7874" dy="0.889" layer="1"/>
+<smd name="2" x="-0.9398" y="1.016" dx="0.7874" dy="0.889" layer="1"/>
+<smd name="1" x="0.0254" y="-1.016" dx="0.7874" dy="0.889" layer="1"/>
+<text x="-1.397" y="1.778" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-1.397" y="3.302" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<rectangle x1="0.7874" y1="0.4318" x2="1.1684" y2="0.9398" layer="51"/>
+<rectangle x1="-1.143" y1="0.4318" x2="-0.762" y2="0.9398" layer="51"/>
+<rectangle x1="-0.1778" y1="-0.9398" x2="0.2032" y2="-0.4318" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1761,9 +1783,9 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <attribute name="NAME" x="22.987" y="16.764" size="0.8128" layer="25" font="vector"/>
 <attribute name="VALUE" x="20.828" y="15.24" size="1.27" layer="27"/>
 </element>
-<element name="C2" library="rcl" package="C0603" value="1u" x="15.494" y="12.827" smashed="yes" rot="R180">
-<attribute name="NAME" x="15.24" y="12.065" size="0.8128" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="16.129" y="14.732" size="1.27" layer="27" rot="R180"/>
+<element name="C2" library="rcl" package="C0603" value="1u" x="13.843" y="9.652" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.621" y="8.763" size="0.8128" layer="25" font="vector" rot="R180"/>
+<attribute name="VALUE" x="14.478" y="11.557" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C3" library="rcl" package="C0805" value="1u" x="19.304" y="15.113" smashed="yes" rot="R180">
 <attribute name="NAME" x="22.606" y="15.494" size="0.8128" layer="25" font="vector" rot="R180"/>
@@ -1800,6 +1822,14 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <element name="IC2" library="bh1750" package="WSOF6" value="BH1750" x="11.049" y="21.717" smashed="yes">
 <attribute name="NAME" x="9.398" y="20.955" size="0.8128" layer="25" font="vector" rot="R90"/>
 <attribute name="VALUE" x="14.224" y="19.177" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="Q1" library="zetex" package="SOT-23" value="" x="13.97" y="12.319" smashed="yes" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="13.97" y="12.319" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="13.97" y="12.319" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="13.97" y="12.319" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="13.97" y="12.319" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="15.367" y="10.541" size="1.27" layer="27" ratio="10" rot="R180"/>
+<attribute name="NAME" x="16.256" y="13.97" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
 </element>
 </elements>
 <signals>
@@ -2077,8 +2107,6 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="11.899" y1="17.907" x2="12.573" y2="17.907" width="0.508" layer="1"/>
 <wire x1="14.605" y1="14.771" x2="13.296" y2="14.771" width="0.508" layer="1"/>
 <wire x1="13.296" y1="14.771" x2="12.573" y2="15.494" width="0.508" layer="1"/>
-<wire x1="14.605" y1="14.771" x2="14.605" y2="12.866" width="0.508" layer="1"/>
-<wire x1="14.605" y1="12.866" x2="14.644" y2="12.827" width="0.508" layer="1"/>
 <wire x1="18.354" y1="15.113" x2="16.637" y2="15.113" width="0.508" layer="1"/>
 <wire x1="16.637" y1="15.113" x2="16.129" y2="14.605" width="0.508" layer="1"/>
 <wire x1="16.129" y1="14.605" x2="14.771" y2="14.605" width="0.508" layer="1"/>
@@ -2111,10 +2139,6 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="21.463" y1="11.557" x2="22.987" y2="11.557" width="0.508" layer="1"/>
 <wire x1="21.463" y1="11.557" x2="21.42" y2="11.496" width="0.508" layer="1"/>
 <wire x1="16.129" y1="8.255" x2="16.383" y2="8.255" width="0.508" layer="1"/>
-<wire x1="14.986" y1="9.398" x2="16.129" y2="8.255" width="0.508" layer="1"/>
-<wire x1="14.986" y1="12.827" x2="14.986" y2="9.398" width="0.508" layer="1"/>
-<wire x1="14.859" y1="12.954" x2="14.986" y2="12.827" width="0.508" layer="1"/>
-<wire x1="14.859" y1="12.954" x2="14.644" y2="12.827" width="0.508" layer="1"/>
 <wire x1="19.558" y1="9.652" x2="20.701" y2="9.652" width="0.508" layer="1"/>
 <wire x1="18.034" y1="8.128" x2="19.558" y2="9.652" width="0.508" layer="1"/>
 <wire x1="16.51" y1="8.128" x2="17.145" y2="8.128" width="0.508" layer="1"/>
@@ -2124,11 +2148,30 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="20.701" y1="9.652" x2="20.701" y2="11.557" width="0.508" layer="1"/>
 <wire x1="21.209" y1="11.557" x2="21.42" y2="11.496" width="0.508" layer="1"/>
 <wire x1="17.145" y1="8.128" x2="17.145" y2="3.81" width="0.508" layer="1"/>
-<wire x1="12.065" y1="9.271" x2="14.859" y2="9.271" width="0.508" layer="1"/>
-<wire x1="9.525" y1="6.731" x2="12.065" y2="9.271" width="0.508" layer="1"/>
 <wire x1="9.525" y1="6.35" x2="9.525" y2="6.731" width="0.508" layer="1"/>
-<wire x1="14.859" y1="9.271" x2="14.986" y2="9.398" width="0.508" layer="1"/>
 <contactref element="X1" pad="P$3"/>
+<contactref element="Q1" pad="3"/>
+<wire x1="12.954" y1="9.652" x2="12.954" y2="11.303" width="0.508" layer="1"/>
+<wire x1="12.954" y1="11.303" x2="12.9794" y2="11.303" width="0.508" layer="1"/>
+<wire x1="12.954" y1="9.652" x2="12.993" y2="9.652" width="0.508" layer="1"/>
+<wire x1="12.954" y1="11.684" x2="12.954" y2="11.43" width="0.508" layer="1"/>
+<wire x1="12.7" y1="11.684" x2="12.954" y2="11.684" width="0.508" layer="1"/>
+<wire x1="12.319" y1="12.065" x2="12.7" y2="11.684" width="0.508" layer="1"/>
+<wire x1="12.319" y1="13.589" x2="12.319" y2="12.065" width="0.508" layer="1"/>
+<wire x1="12.573" y1="13.843" x2="12.319" y2="13.589" width="0.508" layer="1"/>
+<wire x1="12.573" y1="15.494" x2="12.573" y2="13.843" width="0.508" layer="1"/>
+<wire x1="12.954" y1="11.43" x2="12.9794" y2="11.303" width="0.508" layer="1"/>
+<wire x1="9.652" y1="7.874" x2="9.652" y2="6.858" width="0.508" layer="1"/>
+<wire x1="11.43" y1="9.652" x2="9.652" y2="7.874" width="0.508" layer="1"/>
+<wire x1="12.993" y1="9.652" x2="11.43" y2="9.652" width="0.508" layer="1"/>
+<wire x1="9.652" y1="6.858" x2="9.525" y2="6.35" width="0.508" layer="1"/>
+<wire x1="13.208" y1="8.763" x2="13.208" y2="9.525" width="0.508" layer="1"/>
+<wire x1="13.589" y1="8.382" x2="13.208" y2="8.763" width="0.508" layer="1"/>
+<wire x1="16.002" y1="8.382" x2="13.589" y2="8.382" width="0.508" layer="1"/>
+<wire x1="13.208" y1="9.525" x2="12.993" y2="9.652" width="0.508" layer="1"/>
+<wire x1="16.002" y1="8.382" x2="16.129" y2="8.255" width="0.508" layer="1"/>
+<wire x1="5.969" y1="21.59" x2="4.445" y2="21.59" width="0.508" layer="1"/>
+<wire x1="5.969" y1="21.59" x2="6.075" y2="21.6" width="0.508" layer="1"/>
 </signal>
 <signal name="D14_CS">
 <contactref element="X1" pad="19"/>
@@ -2156,16 +2199,9 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </signal>
 <signal name="VRAW" class="1">
 <contactref element="X1" pad="2"/>
-<contactref element="IC1" pad="3"/>
-<contactref element="C2" pad="1"/>
 <wire x1="3.048" y1="22.987" x2="1.905" y2="24.13" width="0.508" layer="1"/>
-<wire x1="15.875" y1="12.954" x2="15.875" y2="13.843" width="0.508" layer="1"/>
-<wire x1="16.129" y1="12.7" x2="15.875" y2="12.954" width="0.508" layer="1"/>
-<wire x1="16.129" y1="12.7" x2="16.344" y2="12.827" width="0.508" layer="1"/>
 <via x="3.048" y="22.987" extent="1-16" drill="0.3302"/>
-<via x="15.875" y="13.843" extent="1-16" drill="0.3302"/>
-<wire x1="11.684" y1="13.843" x2="15.875" y2="13.843" width="0.508" layer="16"/>
-<wire x1="7.874" y1="17.653" x2="11.684" y2="13.843" width="0.508" layer="16"/>
+<wire x1="7.874" y1="17.653" x2="13.081" y2="12.446" width="0.508" layer="16"/>
 <wire x1="7.874" y1="18.415" x2="7.874" y2="17.653" width="0.508" layer="16"/>
 <wire x1="6.731" y1="19.558" x2="7.874" y2="18.415" width="0.508" layer="16"/>
 <wire x1="5.588" y1="19.558" x2="6.731" y2="19.558" width="0.508" layer="16"/>
@@ -2177,12 +2213,14 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="3.429" y1="22.733" x2="3.429" y2="22.225" width="0.508" layer="16"/>
 <wire x1="3.175" y1="22.987" x2="3.429" y2="22.733" width="0.508" layer="16"/>
 <wire x1="3.048" y1="22.987" x2="3.175" y2="22.987" width="0.508" layer="16"/>
-<wire x1="17.907" y1="12.446" x2="19.22" y2="12.446" width="0.508" layer="1"/>
-<wire x1="17.526" y1="12.827" x2="17.907" y2="12.446" width="0.508" layer="1"/>
-<wire x1="16.344" y1="12.827" x2="17.526" y2="12.827" width="0.508" layer="1"/>
 <contactref element="X1" pad="P$2"/>
 <wire x1="0.381" y1="24.13" x2="1.905" y2="24.13" width="0.508" layer="1"/>
 <wire x1="0.381" y1="24.13" x2="0.275" y2="24.1" width="0.508" layer="1"/>
+<contactref element="Q1" pad="1"/>
+<wire x1="13.97" y1="12.446" x2="13.97" y2="13.335" width="0.508" layer="1"/>
+<wire x1="13.081" y1="12.446" x2="13.97" y2="12.446" width="0.508" layer="1"/>
+<wire x1="13.97" y1="13.335" x2="13.9446" y2="13.335" width="0.508" layer="1"/>
+<via x="13.081" y="12.446" extent="1-16" drill="0.3302"/>
 </signal>
 <signal name="VCCIO" class="1">
 <contactref element="X1" pad="4"/>
@@ -2249,6 +2287,21 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="20.066" y1="21.209" x2="22.987" y2="21.209" width="0.2032" layer="1"/>
 <wire x1="19.685" y1="21.59" x2="20.066" y2="21.209" width="0.2032" layer="1"/>
 <wire x1="22.987" y1="21.209" x2="22.987" y2="21.17" width="0.2032" layer="1"/>
+</signal>
+<signal name="N$4" class="1">
+<contactref element="Q1" pad="2"/>
+<contactref element="IC1" pad="3"/>
+<contactref element="C2" pad="1"/>
+<wire x1="14.859" y1="9.652" x2="14.859" y2="11.303" width="0.508" layer="1"/>
+<wire x1="14.859" y1="11.303" x2="14.9098" y2="11.303" width="0.508" layer="1"/>
+<wire x1="14.859" y1="9.652" x2="14.693" y2="9.652" width="0.508" layer="1"/>
+<wire x1="14.859" y1="12.192" x2="14.859" y2="11.43" width="0.508" layer="1"/>
+<wire x1="16.002" y1="12.192" x2="14.859" y2="12.192" width="0.508" layer="1"/>
+<wire x1="16.383" y1="12.573" x2="16.002" y2="12.192" width="0.508" layer="1"/>
+<wire x1="17.526" y1="12.573" x2="16.383" y2="12.573" width="0.508" layer="1"/>
+<wire x1="17.653" y1="12.446" x2="17.526" y2="12.573" width="0.508" layer="1"/>
+<wire x1="19.22" y1="12.446" x2="17.653" y2="12.446" width="0.508" layer="1"/>
+<wire x1="14.859" y1="11.43" x2="14.9098" y2="11.303" width="0.508" layer="1"/>
 </signal>
 </signals>
 <errors>
