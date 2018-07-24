@@ -1,7 +1,7 @@
 # MySXMotion
 ## MySX Board for motion sensor
 
-This is a multipurpose daughterboard but its main use is for AS312 motion sensor with MySX conector. It also consist of BH1750 ambient light sensor and header for one i2c device, uart and avr ISP. It is meant to be combined with a [MySMotherboard] (https://www.openhardware.io/view/606/MySMotherboard) to make fully functional motion sensor node.
+This is a multipurpose daughterboard but its main use is for AS312 motion sensor with MySX conector. It also consist of BH1750 ambient light sensor and header for one i2c device, uart and avr ISP. It is meant to be combined with a [MySMotherboard](https://www.openhardware.io/view/606/MySMotherboard) to make fully functional motion sensor node.
 
 <img src="https://raw.githubusercontent.com/mczerski/MySXMotion/master/img/IMG_20180708_110438.jpg">
 
