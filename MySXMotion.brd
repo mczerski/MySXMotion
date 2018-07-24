@@ -149,6 +149,8 @@
 <text x="21.844" y="39.878" size="1.016" layer="25" font="vector" rot="R180">MySXMotion 1.1</text>
 <hole x="17.145" y="10.34" drill="3"/>
 <hole x="17.145" y="32.84" drill="3"/>
+<text x="23.876" y="25.654" size="1.016" layer="21" font="vector" rot="R90">Licensed under
+CERN OHL v.1.2</text>
 </plain>
 <libraries>
 <library name="con-lstb">
@@ -1739,7 +1741,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </pass>
 </autorouter>
 <elements>
-<element name="BMP280" library="con-lstb" package="MA04-1" value="" x="13.208" y="36.957" smashed="yes" rot="R180">
+<element name="I2C" library="con-lstb" package="MA04-1" value="" x="13.208" y="36.957" smashed="yes" rot="R180">
 <attribute name="OC_NEWARK" value="unknown" x="-7.112" y="67.437" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="-7.112" y="67.437" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="-7.112" y="67.437" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1791,7 +1793,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <attribute name="NAME" x="22.606" y="15.494" size="0.8128" layer="25" font="vector" rot="R180"/>
 <attribute name="VALUE" x="20.574" y="17.653" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="T1" library="transistor" package="TO5" value="" x="17.145" y="21.59" smashed="yes">
+<element name="IC3" library="transistor" package="TO5" value="" x="17.145" y="21.59" smashed="yes">
 <attribute name="NAME" x="14.605" y="26.67" size="1.016" layer="25" font="vector" ratio="10"/>
 <attribute name="VALUE" x="13.97" y="20.955" size="1.27" layer="27" ratio="10"/>
 </element>
@@ -1834,7 +1836,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </elements>
 <signals>
 <signal name="VCC" class="1">
-<contactref element="BMP280" pad="4"/>
+<contactref element="I2C" pad="4"/>
 <contactref element="ISP" pad="2"/>
 <contactref element="UART" pad="4"/>
 <contactref element="X1" pad="1"/>
@@ -1921,7 +1923,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="0.381" y1="16.51" x2="0.275" y2="16.5" width="0.2032" layer="1"/>
 </signal>
 <signal name="D7_SCL">
-<contactref element="BMP280" pad="2"/>
+<contactref element="I2C" pad="2"/>
 <contactref element="X1" pad="14"/>
 <contactref element="IC2" pad="P$6"/>
 <contactref element="R3" pad="1"/>
@@ -1994,7 +1996,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="5.969" y1="3.81" x2="6.075" y2="3.8" width="0.2032" layer="1"/>
 </signal>
 <signal name="D8_SDA">
-<contactref element="BMP280" pad="1"/>
+<contactref element="I2C" pad="1"/>
 <contactref element="X1" pad="13"/>
 <contactref element="IC2" pad="P$4"/>
 <contactref element="R2" pad="1"/>
@@ -2069,7 +2071,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="5.969" y1="19.05" x2="6.075" y2="19.1" width="0.2032" layer="1"/>
 </signal>
 <signal name="GND" class="1">
-<contactref element="BMP280" pad="3"/>
+<contactref element="I2C" pad="3"/>
 <polygon width="0.508" layer="16">
 <vertex x="-1.27" y="0"/>
 <vertex x="25.4" y="0"/>
@@ -2097,7 +2099,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <contactref element="C1" pad="2"/>
 <contactref element="C3" pad="2"/>
 <contactref element="IC1" pad="1"/>
-<contactref element="T1" pad="3"/>
+<contactref element="IC3" pad="3"/>
 <wire x1="12.573" y1="19.177" x2="12.573" y2="17.907" width="0.508" layer="1"/>
 <wire x1="12.573" y1="17.907" x2="12.573" y2="15.494" width="0.508" layer="1"/>
 <wire x1="12.446" y1="19.304" x2="12.573" y2="19.177" width="0.508" layer="1"/>
@@ -2270,7 +2272,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <contactref element="IC1" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="C3" pad="1"/>
-<contactref element="T1" pad="1"/>
+<contactref element="IC3" pad="1"/>
 <wire x1="19.05" y1="17.145" x2="20.613" y2="17.145" width="0.508" layer="1"/>
 <wire x1="17.145" y1="19.05" x2="19.05" y2="17.145" width="0.508" layer="1"/>
 <wire x1="20.613" y1="17.145" x2="20.613" y2="15.472" width="0.508" layer="1"/>
@@ -2283,7 +2285,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="2"/>
-<contactref element="T1" pad="2"/>
+<contactref element="IC3" pad="2"/>
 <wire x1="20.066" y1="21.209" x2="22.987" y2="21.209" width="0.2032" layer="1"/>
 <wire x1="19.685" y1="21.59" x2="20.066" y2="21.209" width="0.2032" layer="1"/>
 <wire x1="22.987" y1="21.209" x2="22.987" y2="21.17" width="0.2032" layer="1"/>
@@ -2326,4 +2328,10 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

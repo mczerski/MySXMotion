@@ -8116,7 +8116,7 @@ http://www.zetex.com&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="BMP280" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="I2C" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="ISP" library="con-lstb" deviceset="MA03-2" device=""/>
 <part name="UART" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="X1" library="my-con-lsta" deviceset="FE10-2" device=""/>
@@ -8125,7 +8125,7 @@ http://www.zetex.com&lt;p&gt;
 <part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="1u"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
-<part name="T1" library="transistor" deviceset="*-NPN-" device="TO5"/>
+<part name="IC3" library="transistor" deviceset="*-NPN-" device="TO5"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="4.7k"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="4.7k"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
@@ -8140,7 +8140,7 @@ http://www.zetex.com&lt;p&gt;
 <plain>
 </plain>
 <instances>
-<instance part="BMP280" gate="1" x="48.26" y="43.18"/>
+<instance part="I2C" gate="1" x="48.26" y="43.18"/>
 <instance part="ISP" gate="1" x="10.16" y="27.94"/>
 <instance part="UART" gate="1" x="48.26" y="25.4"/>
 <instance part="X1" gate="G$1" x="10.16" y="58.42"/>
@@ -8149,11 +8149,23 @@ http://www.zetex.com&lt;p&gt;
 <instance part="C1" gate="G$1" x="53.34" y="-5.08"/>
 <instance part="C2" gate="G$1" x="33.02" y="-5.08"/>
 <instance part="C3" gate="G$1" x="58.42" y="-5.08"/>
-<instance part="T1" gate="G$1" x="68.58" y="-7.62" rot="R180"/>
-<instance part="R2" gate="G$1" x="-10.16" y="-2.54" rot="R90"/>
-<instance part="R3" gate="G$1" x="-5.08" y="-2.54" rot="R90"/>
+<instance part="IC3" gate="G$1" x="68.58" y="-7.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="71.12" y="-2.54" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="78.74" y="-12.7" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R2" gate="G$1" x="-10.16" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="-6.5786" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-6.858" y="-1.27" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="-5.08" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="-1.4986" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-1.778" y="-1.27" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="C4" gate="G$1" x="-27.94" y="-2.54" rot="R180"/>
-<instance part="R4" gate="G$1" x="0" y="-2.54" rot="R270"/>
+<instance part="R4" gate="G$1" x="0" y="-2.54" smashed="yes" rot="R270">
+<attribute name="NAME" x="1.4986" y="-3.81" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="1.778" y="1.27" size="1.778" layer="96" rot="R270"/>
+</instance>
 <instance part="C5" gate="G$1" x="-2.54" y="-22.86"/>
 <instance part="J1" gate="G$1" x="-15.24" y="0"/>
 <instance part="IC2" gate="G$1" x="-22.86" y="-17.78"/>
@@ -8164,7 +8176,7 @@ http://www.zetex.com&lt;p&gt;
 <nets>
 <net name="VCC" class="1">
 <segment>
-<pinref part="BMP280" gate="1" pin="4"/>
+<pinref part="I2C" gate="1" pin="4"/>
 <wire x1="55.88" y1="45.72" x2="58.42" y2="45.72" width="0.1524" layer="91"/>
 <label x="58.42" y="45.72" size="1.778" layer="95"/>
 </segment>
@@ -8233,7 +8245,7 @@ http://www.zetex.com&lt;p&gt;
 </net>
 <net name="D7_SCL" class="0">
 <segment>
-<pinref part="BMP280" gate="1" pin="2"/>
+<pinref part="I2C" gate="1" pin="2"/>
 <wire x1="55.88" y1="40.64" x2="58.42" y2="40.64" width="0.1524" layer="91"/>
 <label x="58.42" y="40.64" size="1.778" layer="95"/>
 </segment>
@@ -8247,7 +8259,7 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="-12.7" x2="-5.08" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="-12.7" x2="-5.08" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-5.08" y="-12.7" size="1.778" layer="95"/>
+<label x="-15.24" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D11_MOSI" class="0">
@@ -8302,7 +8314,7 @@ http://www.zetex.com&lt;p&gt;
 </net>
 <net name="D8_SDA" class="0">
 <segment>
-<pinref part="BMP280" gate="1" pin="1"/>
+<pinref part="I2C" gate="1" pin="1"/>
 <wire x1="55.88" y1="38.1" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
 <label x="58.42" y="38.1" size="1.778" layer="95"/>
 </segment>
@@ -8316,7 +8328,7 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="-10.16" x2="-10.16" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="-10.16" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-10.16" y="-10.16" size="1.778" layer="95"/>
+<label x="-15.24" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D6_PWM" class="0">
@@ -8359,7 +8371,7 @@ http://www.zetex.com&lt;p&gt;
 </net>
 <net name="GND" class="1">
 <segment>
-<pinref part="BMP280" gate="1" pin="3"/>
+<pinref part="I2C" gate="1" pin="3"/>
 <wire x1="55.88" y1="43.18" x2="58.42" y2="43.18" width="0.1524" layer="91"/>
 <label x="58.42" y="43.18" size="1.778" layer="95"/>
 </segment>
@@ -8409,7 +8421,7 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="43.18" y1="-7.62" x2="43.18" y2="-12.7" width="0.1524" layer="91"/>
 <label x="33.02" y="-12.7" size="1.778" layer="95"/>
-<pinref part="T1" gate="G$1" pin="C"/>
+<pinref part="IC3" gate="G$1" pin="C"/>
 <wire x1="66.04" y1="-12.7" x2="58.42" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="43.18" y="-12.7"/>
 <junction x="53.34" y="-12.7"/>
@@ -8489,7 +8501,7 @@ http://www.zetex.com&lt;p&gt;
 <wire x1="53.34" y1="0" x2="58.42" y2="0" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="0" x2="58.42" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="0" x2="66.04" y2="0" width="0.1524" layer="91"/>
-<pinref part="T1" gate="G$1" pin="E"/>
+<pinref part="IC3" gate="G$1" pin="E"/>
 <wire x1="66.04" y1="-2.54" x2="66.04" y2="0" width="0.1524" layer="91"/>
 <junction x="53.34" y="0"/>
 <junction x="58.42" y="0"/>
@@ -8498,7 +8510,7 @@ http://www.zetex.com&lt;p&gt;
 <net name="N$3" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="T1" gate="G$1" pin="B"/>
+<pinref part="IC3" gate="G$1" pin="B"/>
 <wire x1="76.2" y1="-7.62" x2="71.12" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
