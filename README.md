@@ -37,5 +37,6 @@ For easy software developement there is available toolkit library that enhance M
 The easies way to use this software is to clone the current version of the Arduino sketchbook [Arduino-MySensors](https://github.com/mczerski/Arduino-MySensors):
 ```
 git clone https://github.com/mczerski/Arduino-MySensors
+git submodule update --init
 ```
 and then setup Arduino IDE to point to this folder as a sketchbook.
