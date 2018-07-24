@@ -1,0 +1,19 @@
+Part,Value,Package,Description
+C1,100n,C0603,Capacitor
+C2,1u,C0603,Capacitor
+C3,1u,C0805,Capacitor
+C4,100n,C0603,Capacitor
+C5,100n,C0603,Capacitor
+IC1,XC6206P30,SOT23,Voltage Regulators (https://www.torexsemi.com/file/xc6206/XC6206.pdf)
+IC2,BH1750FVI,WSOF6,Ambient light sensor (https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf)
+IC3,AS312,TO5,PIR sensor (http://www.image.micros.com.pl/_dane_techniczne_auto/cz%20as312.pdf)
+Q1,DMP2305U,SOT-23,P-MOSFET (https://www.diodes.com/assets/Datasheets/ds31737.pdf)
+R1,10k,R0603,Resistor
+R2,4.7k,R0603,Resistor
+R3,4.7k,R0603,Resistor
+R4,1k,R0603,Resistor
+UART,,,4x1 PIN HEADER
+I2C,,,4x1 PIN HEADER
+ISP,,,3x2 PIN HEADER
+X1,,,10x2 FEMALE HEADER
+J1,,,SMD solder JUMPER
