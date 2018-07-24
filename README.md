@@ -31,3 +31,11 @@ R2, R3, R4, C4, C5, IC2, J1 (choose one of two options)
 
 4. Additional headers
 By soldering ISP header this board can be use as a MySX to AVR ISP adapter. To I2C header one additional i2c device can be conected. To UART header one additional uart device can be connected.
+
+## Software
+For easy software developement there is available toolkit library that enhance MySensors library called [MySensorsToolkit](https://github.com/mczerski/MySensorsToolkit) and also there is an example sketch [MyMultiSensor](https://github.com/mczerski/MyMultiSensor).
+The easies way to use this software is to clone the current version of the Arduino sketchbook [Arduino-MySensors](https://github.com/mczerski/Arduino-MySensors):
+```
+git clone https://github.com/mczerski/Arduino-MySensors
+```
+and then setup Arduino IDE to point to this folder as a sketchbook.
